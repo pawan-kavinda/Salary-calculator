@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { useInputBoxContext } from "../../../contexts/InputBoxContexts";
 
 const DeductionInputBox = ({ index }) => {
-  const {deductionInputBoxes,setDeductionInputBoxes, handleDeductionPriceChange,handleDeductionDescriptionBoxChange, removeDeductionInputBox } = useInputBoxContext();
+  const {deductionInputBoxes, handleDeductionPriceChange,handleDeductionDescriptionBoxChange, removeDeductionInputBox } = useInputBoxContext();
   const [price, setPrice] = useState(deductionInputBoxes[index].deductionPrice);   
   const [description, setDescription] = useState(deductionInputBoxes[index].description);
 
@@ -40,7 +40,7 @@ const DeductionInputBox = ({ index }) => {
         onChange={ handleDescriptionBox}
         className="lg:h-[48px] lg:w-[212px] lg:mr-3 h-[30px] w-[100px] mr-3 p-2"
         value={description}
-        placeholder="Pay Details (Title)"
+        placeholder="Pay Details (Title)"        
       />
       <input
         onFocus={handlePriceFocus}

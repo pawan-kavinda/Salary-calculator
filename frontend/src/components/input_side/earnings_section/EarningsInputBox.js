@@ -4,12 +4,12 @@ import { useInputBoxContext } from '../../../contexts/InputBoxContexts';
 const EarningsInputBox = ({ index }) => {
   const { earningsInputBoxes, handleEarningsPriceChange, handleEPFCheckboxChange, handleEarningDescriptionBoxChange, removeEarningsInputBox } = useInputBoxContext();
   
-  // Local state for each input box
+
   const [price, setPrice] = useState(earningsInputBoxes[index].price);
   const [isEPFChecked, setIsEPFChecked] = useState(earningsInputBoxes[index].isEPFChecked);
   const [description, setDescription] = useState(earningsInputBoxes[index].description);
 
-  // Update local state when props change
+  // local state manage
   useEffect(() => {
     setPrice(earningsInputBoxes[index].price);
     setIsEPFChecked(earningsInputBoxes[index].isEPFChecked);
